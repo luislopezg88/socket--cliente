@@ -23,7 +23,7 @@ export class ChatComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     
-    //this.elemento = document.getElementById('chat-mensajes');
+    this.elemento = document.getElementById('chat-mensajes')!;
     this.mensajesSubscription = this.chatService.getMessage().subscribe( msg => {
 
       this.mensajes.push( msg );
